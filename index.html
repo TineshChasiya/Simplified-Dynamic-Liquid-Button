@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Simplified Dynamic Liquid Button</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="liquid-button-container" id="btn-wrap">
+            <canvas id="liquid-canvas"></canvas>
+            <button class="interactive-btn">Initiate Splash</button>
+        </div>
+        <svg style="display: none;">
+            <defs>
+                <filter id="liquid-goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <script src="script.js"></script>
+    </body>
+    </html>

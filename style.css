@@ -1,0 +1,43 @@
+body{
+    background: #050508;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow: hidden;
+}
+.liquid-button-container{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+#liquid-canvas{
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: calc(100% + 120px);
+    height: calc(100% + 120px);
+    pointer-events: none;
+    z-index: 1;
+    filter: url('#liquid-goo'); 
+}
+.interactive-btn{
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 18px 42px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease;
+}
+.liquid-button-container:active .interactive-btn{
+    transform: scale(0.95);
+}
